@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Indi Cakes and Sweets - A touch of sweet elegance">
+  <meta name="keywords" content="cakes, bakes, pastries, bakery">
+  <title>BakeBee Cakes and Sweets</title>
+  <style>
+    /* Reset */
+body, h1, h2, h3, p, button {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+body {
+  background-color: #fff8f3;
+  color: #333;
+}
+
+/* Hero Carousel */
+.hero-carousel {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.hero-slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.hero-slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+.hero-content p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.hero-content button {
+  background: white;
+  color: black;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}
+.hero-content button:hover {
+  background: burlywood;
+  color: white;
+}
+
+
+/* About */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 40px;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+.about-images img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.about-images img.large-image {
+    position: relative;
+    top:50px;
+    left:20px;
+}
+.about-text {
+  max-width: 500px;
+}
+.about-text h2 {
+  color: burlywood;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.about-text button {
+  background: black;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}
+.about-text button:hover {
+  background: burlywood;
+}
+
+/* Flavors */
+.flavors {
+  text-align: center;
+  padding: 60px 40px;
+}
+.flavors h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: burlywood;
+}
+.flavors p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+.flavors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.flavor-card {
+  width: 300px;
+}
+.flavor-card img {
+  width: 100%;
+  height: fit-content;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.flavor-card h3 {
+  font-size: 18px;
+}
+
+/* Testimonials */
+.testimonials {
+  background:burlywood;
+  color: white;
+  text-align: center;
+  padding: 60px 40px;
+}
+.testimonials h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+.testimonial-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+.testimonial {
+  max-width: 300px;
+}
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.testimonial h4 {
+  font-weight: normal;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 { font-size: 32px; }
+  .hero-content p { font-size: 18px; }
+  .about, .contact { flex-direction: column; padding: 40px 20px; }
+  .about-images img, .contact-image img { width: 100%; }
+  .about-text, .contact-details { text-align: center; }
+}
+/* Carousel Section */
+.carousel {
+  padding: 60px 40px;
+  background: #fff;
+  text-align: center;
+}
+.carousel h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: burlywood;
+}
+.carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+}
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+.carousel-item {
+  min-width: 250px;
+  background: #fff8f3;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  height: 400px;
+}
+.carousel-item img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.carousel-item p {
+  font-size: 16px;
+  font-weight: 500;
+}
+.carousel-item button {
+  background: rgb(228, 147, 54);
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.3s ease;
+  margin-top: 20px;
+  font-weight: 20px;
+}
+.carousel-item button:hover {
+  background: burlywood;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel-item {
+    min-width: 40%;
+  }
+}
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .hero-content button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .about-images img {
+    width: 90%;
+    margin: auto;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .about-text h2 {
+    font-size: 28px;
+  }
+
+  .about-text p {
+    font-size: 16px;
+  }
+
+  .flavors h2, .carousel h2, .testimonials h2 {
+    font-size: 28px;
+  }
+
+  .flavors p, .carousel-item p, .testimonial p {
+    font-size: 12px;
+  }
+
+  .flavors-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flavor-card {
+    width: 90%;
+  }
+
+  .carousel-item {
+    min-width: 80%;
+    height: auto;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .testimonial-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial {
+    max-width: 90%;
+  }
+}
+
+  </style>
+</head>
+<body>
+<!-- HERO CAROUSEL -->
+<section class="hero-carousel">
+  <div class="hero-slide active">
+    <img src="caketop.jpg" alt="Hero Image 1">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>BakeBee Cakes and Sweets</h1>
+      <p>A TOUCH OF SWEET ELEGANCE</p>
+      <button onclick="document.getElementById('products').scrollIntoView({ behavior: 'smooth' });">Explore</button>
+    </div>
+  </div>
+
+  <div class="hero-slide">
+    <img src="bakeryimg2.jpg" alt="Hero Image 2">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>BakeBee Cakes and Sweets</h1>
+      <p>Delights that melt your heart</p>
+      <button onclick="document.getElementById('products').scrollIntoView({ behavior: 'smooth' });">Explore</button>
+    </div>
+  </div>
+
+  <div class="hero-slide">
+    <img src="strawcake.jpg" alt="Hero Image 3">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>BakeBee Cakes and Sweets</h1>
+      <p>Experience flavors from every corner of India</p>
+      <button onclick="document.getElementById('products').scrollIntoView({ behavior: 'smooth' });">Explore</button>
+    </div>
+  </div>
+</section>
+<!-- ABOUT -->
+  <section class="about">
+    <div class="about-images">
+      <img src="bakkeryimg.jpg" alt="Bread 1">
+      <img src="bakeryimg2.jpg" alt="Bread 2" class="large-image">
+    </div>
+    <div class="about-text">
+      <h2>OUR STORY</h2>
+     <p>“BakeBee Cakes and Sweets started as a small dream in an Indian kitchen, where the aroma of freshly baked goods mingled with family traditions and festive flavors. Our founder, deeply inspired by India’s love for sweets and homemade warmth, turned simple ingredients into moments of joy. From soft milk cakes to spicy puffs and rich plum treats, we serve more than just bakery items — we serve memories, made with love.”</p>
+    </div>
+  </section>
+<!-- FLAVORS -->
+  <section class="flavors">
+<h2>FLAVORS OF INDIA</h2>
+      <p>From the streets of Kolkata to the kitchens of Kerala, our bakes are inspired by India’s rich culinary heritage. Taste tradition in every slice.</p>
+    <div class="flavors-grid">
+      <div class="flavor-card">
+        <img src="desisweet1.jpg" alt="Appetizers">
+      </div>
+      <div class="flavor-card">
+        <img src="desisweet2.jpg" alt="Mains">
+      </div>
+      <div class="flavor-card">
+        <img src="desisweet3.jpg" alt="Desserts">
+      </div>
+    </div>
+  </section>
+<!-- PRODUCTS CAROUSEL -->
+<section class="carousel" id="products">
+  <h2>OUR SPECIALITIES</h2>
+  <div class="carousel-track" id="carouselTrack">
+    <div class="carousel-item">
+      <img src="pexels-chudesabyvaut-1351350-2612373.jpg" alt="Chocolate Truffle Cake">
+      <p>Chocolate Truffle Cake</p>
+      <button>Order Now</button>
+    </div>
+    <div class="carousel-item">
+      <img src="cokkies1.jpg" alt="Chip Cookies">
+      <p>Chip Cookies</p>
+      <button>Order Now</button>
+    </div>
+    <div class="carousel-item">
+      <img src="pexels-elli-559179-1854652.jpg" alt="Strawberry Cream Delight">
+      <p>Strawberry Cream Delight</p>
+      <button>Order Now</button>
+    </div>
+    <div class="carousel-item">
+      <img src="laddu.jpg" alt="Laddu">
+      <p>Laddu</p>
+      <button>Order Now</button>
+    </div>
+    <div class="carousel-item">
+      <img src="choclava.jpg" alt="Chocolate Lava Cake">
+      <p>Chocolate Lava Cake</p>
+      <button>Order Now</button>
+    </div>
+    <div class="carousel-item">
+      <img src="desisweet2.jpg" alt="Mysore Pak">
+      <p>Mysore Pak</p>
+      <button>Order Now</button>
+    </div>
+    <div class="carousel-item">
+      <img src="mixture.jpg" alt="South Indian Mixture">
+      <p>South Indian Mixture</p>
+      <button>Order Now</button>
+    </div>
+    <div class="carousel-item">
+      <img src="frenchdries.jpg" alt="French Fries">
+      <p>French Fries</p>
+      <button>Order Now</button>
+    </div>
+    <div class="carousel-item">
+      <img src="desisweet3.jpg" alt="Kaju Katli">
+      <p>Kaju Katli</p>
+      <button>Order Now</button>
+    </div>
+    <div class="carousel-item">
+      <img src="samosa.jpg" alt="Samosa">
+      <p>Samosa</p>
+      <button>Order Now</button>
+    </div>
+    <div class="carousel-item">
+      <img src="smallpuffs.jpg" alt="Mini Puffs">
+      <p>Mini Puffs</p>
+      <button>Order Now</button>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <h2>OUR CUSTOMERS SPEAK</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <p>“Absolutely magical. I felt like I was on the streets of Paris with every bite.”</p>
+        <h4>- Priya, Food Blogger</h4>
+      </div>
+      <div class="testimonial">
+        <p>“I ordered for a birthday and everyone kept asking where the cake was from. Exceptional!”</p>
+        <h4>- Rahul, Software Engineer</h4>
+      </div>
+      <div class="testimonial">
+      <p>“Finally found a place that treats baking like art. Taste, presentation, and soul – all in one.”</p>
+      <h4>- Aishwarya, Artist</h4>
+      </div>
+    </div>
+  </section>
+<script>
+  function scrollCarousel(direction) {
+    const track = document.getElementById('carouselTrack');
+    const scrollAmount = 300;
+    track.scrollBy({
+      left: direction * scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".hero-slide");
+
+  function showNextSlide() {
+    slides[currentSlide].classList.remove("active");
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add("active");
+  }
+
+  setInterval(showNextSlide, 5000); // 5 seconds per slide
+
+</script>
+
+</body>
+</html>
