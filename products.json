@@ -1,0 +1,219 @@
+[
+  {
+    "id": "athleisure-tee",
+    "name": "Athleisure Tee",
+    "price": 1299,
+    "compare_at": 1699,
+    "rating": 4.6,
+    "reviews": 127,
+    "colors": [
+      "Black",
+      "White",
+      "Navy"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "category": "Tops",
+    "images": [
+      "pexels-sebastiaan9977-1304647.jpg"
+    ],
+    "description": "Breathable, quick-dry tee with a tailored fit\u2014perfect for workouts or weekends."
+  },
+  {
+    "id": "summer-dress",
+    "name": "Breeze Summer Dress",
+    "price": 2499,
+    "compare_at": 2999,
+    "rating": 4.8,
+    "reviews": 201,
+    "colors": [
+      "Coral",
+      "Mint",
+      "Ivory"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "category": "Dresses",
+    "images": [
+      "shopping.webp"
+    ],
+    "description": "Lightweight A-line dress with hidden pockets and a flattering V-neck."
+  },
+  {
+    "id": "linen-shirt",
+    "name": "Coastal Linen Shirt",
+    "price": 2199,
+    "compare_at": 2599,
+    "rating": 4.4,
+    "reviews": 74,
+    "colors": [
+      "Olive",
+      "Sky",
+      "Sand"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "category": "Shirts",
+    "images": [
+      "BrownBeigeBlendedLinenShirt_1_136b2552-2822-4b5e-bf83-bde31bab5a81.webp"
+    ],
+    "description": "100% linen, pre-washed for softness. Breathes great in hot weather."
+  },
+        {
+    "id": "CORSICA-Indie-Floral-Printed-Vest",
+    "name": "CORSICA Indie Floral Printed Vest",
+    "price": 1099,
+    "compare_at": 1299,
+    "rating": 4.5,
+    "reviews": 62,
+    "colors": [
+      "Charcoal",
+      "Navy",
+      "Black"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "category": "Outerwear",
+    "images": [
+      "shopping (5).webp"
+    ],
+    "description": "Unstructured knit blazer that dresses up or down with ease."
+  },
+  {
+    "id": "denim-jacket",
+    "name": "Heritage Denim Jacket",
+    "price": 3299,
+    "compare_at": 3799,
+    "rating": 4.7,
+    "reviews": 153,
+    "colors": [
+      "Indigo",
+      "Stone"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "category": "Outerwear",
+    "images": [
+      "shopping (1).webp"
+    ],
+    "description": "Classic trucker silhouette with stretch for comfort and movement."
+  },
+        {
+    "id": "Istyle-Can-Womenss-Printed-Stretchable-Draped-Crop-Top",
+    "name": "Istyle Can' Womenss Printed Stretchable Draped Crop Top",
+    "price": 399,
+    "compare_at": 599,
+    "rating": 4.5,
+    "reviews": 62,
+    "colors": [
+      "Charcoal",
+      "Navy",
+      "Black"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "category": "Outerwear",
+    "images": [
+      "shopping (6).webp"
+    ],
+    "description": "Unstructured knit blazer that dresses up or down with ease."
+  },
+  {
+    "id": "chino-pants",
+    "name": "Everyday Chino Pants",
+    "price": 1999,
+    "compare_at": 2399,
+    "rating": 4.3,
+    "reviews": 89,
+    "colors": [
+      "Khaki",
+      "Charcoal",
+      "Navy"
+    ],
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36",
+      "38"
+    ],
+    "category": "Bottoms",
+    "images": [
+      "shopping (2).webp"
+    ],
+    "description": "Slim-tapered chinos with just the right stretch and a clean finish."
+  },
+  {
+    "id": "classic-blazer",
+    "name": "Classic Knit Blazer",
+    "price": 4499,
+    "compare_at": 5299,
+    "rating": 4.5,
+    "reviews": 62,
+    "colors": [
+      "Charcoal",
+      "Navy"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "category": "Outerwear",
+    "images": [
+      "shopping (3).webp"
+    ],
+    "description": "Unstructured knit blazer that dresses up or down with ease."
+  },
+    {
+    "id": "Printed-Flared-Palazzos",
+    "name": "TAG 7 Women's Printed Flared Palazzos",
+    "price": 499,
+    "compare_at": 699,
+    "rating": 4.5,
+    "reviews": 62,
+    "colors": [
+      "Charcoal",
+      "Navy",
+      "Black"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "category": "Outerwear",
+    "images": [
+      "shopping (4).webp"
+    ],
+    "description": "Unstructured knit blazer that dresses up or down with ease."
+  }
+]
